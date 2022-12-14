@@ -13,37 +13,49 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Oxygen:wght@300;400&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Oxygen:wght@300;400&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
     <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Queue</title>
-</head>
+</hright
+
 <body>
-    <div class="header">
+    <div class="header" id="home">
         <nav data-aos="fade-down">
             <div class="nav_bar">
-                <div class="logo">
-                    <h1>Queue</h1>
-                </div>
+                <a href="#home">
+                    <div class="logo">
+                        <h1>Queue</h1>
+                    </div>
+                </a>
                 <div class="nav_tabs">
-                    <ul>
-                        <a href="#">
+                    <ul id="TopNav">
+                        <a href="#home" onclick="closeNav()">
                             <li>Home</li>
                         </a>
-                        <a href="#">
+                        <a href="#features" onclick="closeNav()">
+                            <li>Features</li>
+                        </a>
+                        <a href="#about_us" onclick="closeNav()">
                             <li>About</li>
                         </a>
-                        <a href="#">
-                            <li>Types</li>
-                        </a>
-                        <a href="#">
+                        <a href="#usage" onclick="closeNav()">
                             <li>Usage</li>
                         </a>
-                        <a href="#faqs">
+                        <a href="#faqs" onclick="closeNav()">
                             <li>FAQs</li>
                         </a>
+                        <a href="#variants" onclick="closeNav()">
+                            <li>Variants</li>
+                        </a>
                     </ul>
+                </div>
+                <div class="menu_btn">
+                    <img src="images/menu.svg" id="menuBtn" onclick="menutoggle()">
                 </div>
             </div>
         </nav>
@@ -61,64 +73,219 @@
         </div>
     </div>
 
+    <!-- -----Features----- -->
+    <div class="features" id="features">
+        <div class="title_text">
+            <span>Choose Us</span>
+            <h1>Here's Top 3 reasons why to use Queue App<br>for Your Appointments</h1>
+        </div>
+        <div class="features_container">
+            <div class="features_box" data-aos="fade-up" data-aos-offset="200" data-aos-duration="300"
+                data-aos-delay="100" data-aos-easing="linear">
+                <img src="images/easy_to_use.png">
+                <h1>Easy To Use</h1>
+                <p>Queue App is very easy to use. Just scan a QR code to join a appointment or queue.</p>
+            </div>
+            <div class="features_box" data-aos="fade-up" data-aos-offset="200" data-aos-duration="300"
+                data-aos-delay="400" data-aos-easing="linear">
+                <img src="images/customer_service.png">
+                <h1>24/7 Customer Service</h1>
+                <p>Awesome and friendly online chats with our Community Liaisons (CLs) anytime, anywhere and for anyone.
+                </p>
+            </div>
+            <div class="features_box" data-aos="fade-up" data-aos-offset="200" data-aos-duration="300"
+                data-aos-delay="700" data-aos-easing="linear">
+                <img src="images/fast_time.png">
+                <h1>Track Your Appointments</h1>
+                <p>Queue App let you track all of your appointments and keep an eye on your all queues.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----About Us----- -->
+    <div class="about_us" id="about_us">
+        <div class="about_container">
+            <div class="title_text">
+                <span>About Us</span>
+                <h1>What Do We Do?</h1>
+            </div>
+            <div class="about_content">
+                <p>The days of waiting in long lines are gone. The Queue app combines in-person and phone booking online
+                    in
+                    one
+                    convenient system. It functions as a virtual reception desk, receiving appointment requests from
+                    clients,
+                    locating their appointment among existing bookings, updating them on waiting times, and finally
+                    contacting
+                    them for their appointment turn.
+                    Clients can track the countdown to their appointment using their smartphones, allowing them to run
+                    other
+                    errands while waiting and saving time. This digitilized queue management eliminates queues and busy
+                    waiting
+                    rooms, and ensures social distancing, optimizing safety and comfort for both customers and the
+                    staff.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----Usage----- -->
+    <div class="usage" id="usage">
+        <div class="title_text">
+            <span>Usage</span>
+            <h1>How To Use It</h1>
+        </div>
+        <div class="usage_container">
+            <div class="usage_content" data-aos="fade-right" data-aos-offset="180" data-aos-duration="400"
+                data-aos-delay="100" data-aos-easing="linear">
+                <h1>For Provider</h1>
+                <p>Install the Queue App from our Marketplace. For the provider app, first, register using a valid email
+                    account. Open the app and customize your setting like Opening time, closing time, Active or close
+                    days, and average queue time. You'll be provided with a QR code. On scanning the code, you'll jump
+                    into the scheduling page where you can access the queue length and next arrivals. A provider can
+                    cancel the booking anytime.</p>
+            </div>
+            <div class="usage_content" data-aos="fade-right" data-aos-offset="180" data-aos-duration="400"
+                data-aos-delay="400" data-aos-easing="linear">
+                <h1>For Client</h1>
+                <p>For the client app, again register yourself on the app using your email. After registering, scan the
+                    QR code given by your provider. You can easily select which services you want to assign Queue App
+                    booking to, by adding them to your provider list. Once they are added, you can see the current queue
+                    details. Request "add me to the queue" and you'll be updated with your estimated appointment time.
+                    You can leave the queue anytime you want. It is also possible to book yourself with multiple
+                    providers at the same time.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----FAQs----- -->
     <div class="faqs" id="faqs">
         <div class="title_text">
             <span>FAQs</span>
             <h1>Questions? You Need Answer</h1>
-            
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        </div>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item" data-aos="fade-right" data-aos-offset="0" data-aos-duration="400"
+                data-aos-delay="100" data-aos-easing="linear">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Why Queue management is needed?
                     </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        In the midst of the covid pandemic, queueing on mobile devices improves social distancing, eliminating traffic and crowded waiting rooms. It also helps you save time.
+                        In the midst of the covid pandemic, queueing on mobile devices improves social distancing,
+                        eliminating traffic and crowded waiting rooms. It also helps you save time.
                     </div>
-                  </div>
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            </div>
+            <div class="accordion-item" data-aos="fade-right" data-aos-offset="0" data-aos-duration="400"
+                data-aos-delay="400" data-aos-easing="linear">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         Why do you need a mobile queuing app?
                     </button>
-                  </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        This is a modern-day digital solution for clients to help them secure a place in the queue via their mobile phone device
+                        This is a modern-day digital solution for clients to help them secure a place in the queue
+                        via their mobile phone device
                     </div>
-                  </div>
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            </div>
+            <div class="accordion-item" data-aos="fade-right" data-aos-offset="0" data-aos-duration="400"
+                data-aos-delay="700" data-aos-easing="linear">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         Why should you choose the Queue app?
                     </button>
-                  </h2>
-                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        There are a lot of queue management apps in the market, but the best application in terms of price and user-friendly features is the Queue app. 
+                        There are a lot of queue management apps in the market, but the best application in terms of
+                        price and user-friendly features is the Queue app.
                     </div>
-                  </div>
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+            </div>
+            <div class="accordion-item" data-aos="fade-right" data-aos-offset="0" data-aos-duration="400"
+                data-aos-delay="1000" data-aos-easing="linear">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
                         Does this application work on Android or IOS?
                     </button>
-                  </h2>
-                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         You can install the Queue app on both Android and IOS.
                     </div>
-                  </div>
                 </div>
-              </div>
+            </div>
         </div>
     </div>
 
+    <!-- -----Types----- -->
+    <div class="usage" id="variants">
+        <div class="title_text">
+            <span>Variants</span>
+            <h1>There are two Variants of Queue App</h1>
+        </div>
+        <div class="usage_container">
+            <div class="usage_content" data-aos="fade-up" data-aos-offset="180" data-aos-duration="400"
+                data-aos-delay="100" data-aos-easing="linear">
+                <h1>Provider Variant</h1>
+                <p>Even the broad smile of a receptionist cannot mask the fact that waiting times and long queues negatively affect customer satisfaction. For a provider, the Queue app serves as a mobile-integrated queue management system to minimize waiting times and optimize the customers' flow, allowing your customers to virtually join a queue before visiting. After registering on the app, the provider gets the QR code that is provided to clients to let them book the appointment and know the estimated time and turn.
+                </p>
+            </div>
+            <div class="usage_content" data-aos="fade-up" data-aos-offset="180" data-aos-duration="400"
+                data-aos-delay="400" data-aos-easing="linear">
+                <h1>Client Variant</h1>
+                <p>Clients use their smartphones to access a variety of services such as hospitals, banks, pharmacies, supermarkets, government organizations, retail stores, and much more. A waiting time estimate is provided immediately after they request an appointment. Customers scan QR codes with their phones to jump right into the booking process. An appointment ticket number is sent to clients, and they can track the countdown and queue number to their session turn from their smartphones, allowing them the freedom to wait elsewhere or run other errands. An app notification alerts a client when their appointment is due. Real-time updates on queue lengths and waiting time also help to schedule changes like cancellations..</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----Footer----- -->
+    <footer>
+        <div class="footer_container">
+            <div class="footer_col">
+                <h1>Download Our App</h1>
+                <p>Download Our App for Android and ios mobile phones.</p>
+                <div class="download_images">
+                    <a href="https://play.google.com/store/games" target="_blank"><img src="images/play-store.png"></a>
+                    <a href="https://www.apple.com/app-store/" target="_blank"><img src="images/app-store.png"></a>
+                </div>
+            </div>
+            <div class="footer_col">
+                <h1>Links</h1>
+                <a href="#home"><p>Home</p></a>
+                <a href="#features"><p>Features</p></a>
+                <a href="#about"><p>About</p></a>
+                <a href="#usage"><p>Usage</p></a>
+                <a href="#faqs"><p>FAQs</p></a>
+                <a href="#variants"><p>Variants</p></a>
+            </div>
+            <div class="footer_col">
+                <h1>Follow Us</h1>
+                <a href="https://www.facebook.com/" target="_blank"><p>Facebook</p></a>
+                <a href="https://www.twitter.com/" target="_blank"><p>Twitter</p></a>
+                <a href="https://www.instagram.com/" target="_blank"><p>Instagram</p></a>
+            </div>
+            <div class="footer_col">
+                <h1>Contact Us</h1>
+                <p>Flat 20, Reynolds Neck, North<br>Helenaville, FV77 8WS</p>
+               <a href="tel:+2(305) 587-3407"><p>+2(305) 587-3407</p></a>
+               <a href="mailto:someone@example.com"><p>someone@example.com</p></a>
+            </div>
+        </div>
+    </footer>
 
     <!-- -----JavaScript----- -->
     <script>
@@ -127,6 +294,35 @@
             delay: 400,
             duration: 600,
         });
+
+        // Menu Toggle Script
+
+        let menuBtn = document.getElementById("menuBtn");
+        let TopNav = document.getElementById("TopNav");
+
+        TopNav.style.maxHeight = "0px";
+        TopNav.style.padding = "0px";
+
+        function menutoggle(){
+
+            if (TopNav.style.maxHeight == "0px"){
+                TopNav.style.maxHeight = "300px";
+                TopNav.style.padding = "20px";
+                menuBtn.src = "images/cross.svg";
+            }
+            else{
+                TopNav.style.maxHeight = "0px";
+                TopNav.style.padding = "0px";
+                menuBtn.src = "images/menu.svg";
+            }
+        }
+
+        function closeNav(){
+            TopNav.style.maxHeight = "0px";
+            TopNav.style.padding = "0px";
+            menuBtn.src = "images/menu.svg";
+        }
+
     </script>
 
 </body>
